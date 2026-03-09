@@ -17,16 +17,13 @@ ans:--The spread operator is used for expands an array or object into individual
 
 
     - 3️⃣ What is the difference between map(), filter(), and forEach()?
-forEach() → loops through array, no return, for side effects
+    ans:--
+forEach() = loops through array.
 
-map() → transforms array, returns new array
+map() = it transforms array, returns new array. we use  map to transform
 
-filter() → filters array, returns new array with items that pass a condition
-Use forEach for actions (logging, updating external things)
-
-Use map to transform
-
-Use filter to select items based on a condition
+filter() = it filters array, returns new array with items that pass a condition
+we commonly use filter to select items based on a condition
 
 
  4️⃣ What is an arrow function?
