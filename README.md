@@ -31,16 +31,9 @@ Use filter to select items based on a condition
 
  4️⃣ What is an arrow function?
 
-Arrow function (=>) in JavaScript is a shorter syntax for writing functions.
-No function keyword needed
+ans:--Arrow function  is a shorter syntax for writing functions.here no function keyword is needed
+we mostly use arrow functions for short, concise functions, especially in callbacks.
 
-Implicit return if single expression
-
-Lexical this → keeps this from the surrounding scope
-
-Example:
-
-Use arrow functions for short, concise functions, especially in callbacks.
     - 5️⃣ What are template literals?
 
 ans:--Template literals in JavaScript are strings wrapped in backticks (` `) that allow interpolation and multi-line strings.
