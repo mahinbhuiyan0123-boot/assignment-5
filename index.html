@@ -9,34 +9,40 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body class="bg-gray-400 min-h-screen py-10">
-    <form id="login" class="fieldset bg-base-200 mx-auto border-base-300 rounded-box w-xl flex flex-col border p-4">
+<body class="bg-gray-200 min-h-screen flex items-center justify-center py-10">
 
-        <div class="flex flex-col items-center mb-4"><img src="./assets/github-logo.png" alt="">
-            <h1 class="font-bold text-2xl">GitHub Issues Tracker</h1>
-            <h3 class="text-gray-400">Sign in to manage your issues</h3>
+    <form id="login" class="bg-base-100 rounded-lg shadow-lg w-11/12 sm:w-96 flex flex-col p-6">
+
+        <div class="flex flex-col items-center mb-6">
+            <img src="./assets/github-logo.png" alt="GitHub Logo" class="w-16 h-16 mb-2">
+            <h1 class="font-bold text-2xl text-center">GitHub Issues Tracker</h1>
+            <h3 class="text-gray-500 text-center text-sm mt-1">Sign in to manage your issues</h3>
         </div>
-        <label class="label">Username</label>
-        <input type="text" id="username" class="input w-full max-w-xl" value="admin" placeholder="Enter Username" />
-        <p class="text-purple-600">Default: admin</p>
 
-        <label class="label">Password</label>
-        <input type="password" id="password" class="input w-full max-w-xl" value="admin123"
-            placeholder="Enter Password" />
-        <p class="text-purple-600">Default: admin123</p>
+        <label class="label text-sm font-semibold mt-2">Username</label>
+        <input type="text" id="username" class="input w-full" value="admin" placeholder="Enter Username" />
+        <p class="text-purple-600 text-xs mt-1">Default: admin</p>
 
-        <button type="submit" class="btn btn-neutral mt-4 bg-[#4A00FF]">Sign In</button>
+        <label class="label text-sm font-semibold mt-4">Password</label>
+        <input type="password" id="password" class="input w-full" value="admin123" placeholder="Enter Password" />
+        <p class="text-purple-600 text-xs mt-1">Default: admin123</p>
+
+
+        <button type="submit" class="btn btn-neutral mt-6 bg-[#4A00FF] text-white">Sign In</button>
+
         <div class="flex items-center my-6">
             <hr class="flex-grow border-gray-300">
-            <span class="mx-4">OR</span>
+            <span class="mx-2 text-gray-500 text-sm">OR</span>
             <hr class="flex-grow border-gray-300">
         </div>
-        <p class="text-center">Demo Credentials:</p>
-        <div class="text-center">
+
+        <p class="text-center text-gray-600 text-sm">Demo Credentials:</p>
+        <div class="text-center text-gray-700 text-sm mt-1">
             <p>Username: admin</p>
             <p>Password: admin123</p>
         </div>
     </form>
+
     <script src="./java/script.js"></script>
 </body>
 

@@ -90,7 +90,7 @@ async function selectcatagory(id) {
 
 
     if (id === "allbtn") {
-        managespinner(true);
+        // managespinner(true);
         allbtn.classList.remove("bg-gray-500");
         allbtn.classList.add("bg-blue-500", "text-white");
         openbtn.classList.add("bg-gray-500", "text-white");
@@ -103,7 +103,7 @@ async function selectcatagory(id) {
         managespinner(false);
     }
     else if (id === "openbtn") {
-        managespinner(true);
+        // managespinner(true);
         openbtn.classList.add("bg-blue-500", "text-white");
         allbtn.classList.add("bg-gray-500", "text-white");
         closebtn.classList.add("bg-gray-500", "text-white");
@@ -114,10 +114,10 @@ async function selectcatagory(id) {
             displaycard(card);
         });
         document.getElementById("cardcount").innerText = filtered.length;
-        managespinner(false);
+        // managespinner(false);
     }
     else if (id === "closebtn") {
-        managespinner(true);
+        // managespinner(true);
         closebtn.classList.add("bg-blue-500", "text-white");
         openbtn.classList.add("bg-gray-500", "text-white");
         allbtn.classList.add("bg-gray-500", "text-white");
@@ -128,7 +128,7 @@ async function selectcatagory(id) {
             displaycard(card);
         });
         document.getElementById("cardcount").innerText = filtered.length;
-        managespinner(false);
+        // managespinner(false);
 
     }
 }
