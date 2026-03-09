@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+</head>
+
+<body class="bg-[#F8FAFC]">
+
+
+    <section>
+        <div class="navbar bg-base-100 shadow-sm">
+            <div class="flex-1">
+                <a class="btn btn-ghost text-xl"><img src="../assets/github-logo.png" class="w-8 h-8" alt=""> GitHub
+                    Issues Tracker</a>
+            </div>
+            <div class="flex gap-2">
+                <input id="searchinput" type="text" placeholder="Search issues..."
+                    class="input input-bordered w-24 md:w-auto" />
+                <div class=" flex bg-purple-600 rounded">
+                    <button class="flex w-[100px] text-white items-center text-center "><i
+                            class="fa-solid fa-plus"></i>New
+                        Issue</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section id="toggle" class="bg-white mt-8 mb-8 p-6 w-11/12 rounded mx-auto">
+        <button onclick="selectcatagory('allbtn')" id="allbtn"
+            class="w-[95px] h-[40px] bg-blue-500 text-white border rounded text-center">All</button>
+        <button onclick="selectcatagory('openbtn')" id="openbtn"
+            class="w-[95px] h-[40px] bg-gray-500 text-white border rounded text-center">Open</button>
+        <button onclick="selectcatagory('closebtn')" id="closebtn"
+            class="w-[95px] h-[40px] bg-gray-500 text-white border rounded text-center">Close</button>
+
+    </section>
+    <section id="count" class="flex justify-between w-11/12 bg-white mx-auto p-6 rounded shadow-md">
+        <div id="count-left" class="flex gap-4 ">
+            <img src="../assets/Aperture.png" alt="">
+            <div>
+                <h2 class="font-bold"><span id="cardcount">0</span> Issues</h2>
+                <p class="text-gray-500">Track and manage your project issues</p>
+            </div>
+        </div>
+        <div id="count-right" class="flex gap-5">
+            <div class="flex items-center gap-2"><span class="bg-green-500 w-3 h-3 rounded-full"></span>
+                <p class="font-semibold">Open</p>
+            </div>
+            <div class="flex items-center gap-2"><span class="bg-purple-500 w-3 h-3 rounded-full"></span>
+                <p class="font-semibold">Close</p>
+            </div>
+        </div>
+    </section>
+    <section id="cards" class="mt-3 grid grid-cols-4 space-x-2 space-y-2 w-11/12 mx-auto">
+        <div id="spinner" class="flex justify-center items-center hidden"> <span
+                class=" loading loading-spinner loading-xl"></span>
+        </div>
+
+    </section>
+
+    <section>
+        <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box">
+
+                <h3 id="modalTitle" class="text-lg font-bold"></h3>
+
+                <div class="flex gap-3 text-gray-400">
+                    <p>Opened</p>
+                    <ul class="list-disc pl-5 flex gap-5">
+                        <li id="modalAuthor"></li>
+                        <li id="modalDate"></li>
+                    </ul>
+                </div>
+
+                <div id="modalLabels" class="flex gap-2 mt-2"></div>
+
+                <p id="modalDescription" class="mt-3"></p>
+
+                <div class="last bg-gray-100 flex gap-40 p-4 rounded mt-4">
+                    <div>
+                        <p>Assignee:</p>
+                        <p class="font-semibold" id="modalAssignee"></p>
+                    </div>
+
+                    <div>
+                        <p>Priority:</p>
+                        <p class="bg-red-700 text-white rounded text-center" id="modalPriority"></p>
+                    </div>
+                </div>
+
+                <div class="modal-action">
+                    <form method="dialog">
+                        <button class="btn bg-blue-700 text-white">Close</button>
+                    </form>
+                </div>
+
+            </div>
+        </dialog>
+    </section>
+
+
+
+
+
+    <script src="../java/main.js"></script>
+</body>
+
+</html>
